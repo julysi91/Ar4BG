@@ -1,51 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>AR-Visitenkarte</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        model-viewer {
-            width: 90vw;
-            max-width: 500px;
-            height: 500px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        p {
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>AR-Visitenkarte</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body { margin: 0; }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body>
-    <h1>AR-Modell anschauen</h1>
-    <p>Scanne den QR-Code auf der Visitenkarte und sehe das Modell in deiner Umgebung. Du kannst herumgehen und es von allen Seiten betrachten!</p>
+  <model-viewer
+    src="L4BG.glb"      
+    ios-src="L4BG.usdz" 
 
-    <model-viewer
-        src="model.glb"  <!-- Hier dein 3D-Modell einfügen -->
-        alt="3D-Modell"
-        ar
-        ar-placement="floor"
-        ar-modes="webxr scene-viewer quick-look"
-        camera-controls
-        auto-rotate
-        environment-image="neutral"
-        shadow-intensity="1">
-    </model-viewer>
-
+    alt="Mein 3D Modell"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-placement="floor"
+    camera-controls
+    auto-rotate
+    environment-image="neutral"
+    shadow-intensity="1">
+  </model-viewer>
 </body>
 </html>
