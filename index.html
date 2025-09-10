@@ -2,21 +2,19 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AR-Visitenkarte</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     body { margin: 0; }
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-    }
+    model-viewer { width: 100vw; height: 100vh; }
   </style>
 </head>
 <body>
   <model-viewer
-    src="model.glb"         <!-- Dein 3D-Modell .glb ersetzen -->
-    ios-src="dummy.usdz"    <!-- Dein 3D-Modell .usdz für iOS ersetzen -->
-    alt="3D Modell"
+    src="deinModell.glb"
+    ios-src="deinModell.usdz"
+    alt="3D-Modell"
     ar
     ar-modes="webxr scene-viewer quick-look"
     ar-placement="floor"
@@ -27,3 +25,4 @@
   </model-viewer>
 </body>
 </html>
+
